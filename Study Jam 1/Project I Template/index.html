@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Showcase Website</title>
+    
+    <!-- 1. LINK TO GOOGLE FONTS (Optional but recommended in the brief) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- 2. LINK TO YOUR CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- === HEADER SECTION (Logo & Navigation) === -->
+    <header>
+        <div class="logo">
+            <!-- Change this text to your Name or Brand Name -->
+            <h1>[MyBrand]</h1>
+        </div>
+        <nav>
+            <ul>
+                <!-- Links to jump to sections -->
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- === MAIN CONTENT CONTAINER === -->
+    <main>
+
+        <!-- SECTION 1: HERO (Introduction) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <!-- Short & Catchy Title -->
+                <h2>Hello, I'm <span class="highlight">[Your Name]</span></h2>
+                <p>A passionate [Your Role, e.g., Web Developer / Designer / Fan].</p>
+                <p>Welcome to my personal showcase.</p>
+                <!-- Call to Action Button -->
+                <a href="#portfolio" class="btn">See My Work</a>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ABOUT (Bio) -->
+        <section id="about" class="container">
+            <h3>About Me</h3>
+            <div class="about-grid">
+                <!-- Place your photo here (use a real image path) -->
+                <img src="https://placehold.co/300" alt="Profile Picture" class="profile-pic">
+                
+                <div class="about-text">
+                    <p>
+                        [Write a paragraph here. Who are you? What do you like? 
+                        If this is a Fan Page, write about why you love this character/band.
+                        If this is a Brand, write about your company mission.]
+                    </p>
+                    <p>
+                        <strong>My Skills:</strong> HTML, CSS, [Add more skills]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PORTFOLIO / GALLERY -->
+        <section id="portfolio" class="container">
+            <h3>My Projects / Gallery</h3>
+            
+            <!-- This is the GRID for your items -->
+            <div class="project-grid">
+                
+                <!-- Item 1 -->
+                <div class="card">
+                    <!-- Image of the project -->
+                    <img src="https://placehold.co/400x300" alt="Project 1">
+                    <div class="card-info">
+                        <h4>Project Title 1</h4>
+                        <p>Short description of what this project is.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="card">
+                    <img src="https://placehold.co/400x300" alt="Project 2">
+                    <div class="card-info">
+                        <h4>Project Title 2</h4>
+                        <p>Short description of what this project is.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="card">
+                    <img src="https://placehold.co/400x300" alt="Project 3">
+                    <div class="card-info">
+                        <h4>Project Title 3</h4>
+                        <p>Short description of what this project is.</p>
+                    </div>
+                </div>
+
+                <!-- Add more cards if you want! -->
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- === FOOTER SECTION === -->
+    <footer>
+        <p>&copy; 2024 [Your Name]. Built with HTML & CSS.</p>
+        <div class="social-links">
+            <!-- Add your real links here -->
+            <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>

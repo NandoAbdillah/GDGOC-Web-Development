@@ -1,0 +1,12 @@
+ 
+ body {
+    background-color: antiquewhite;
+ }
+
+ .box-model {
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    margin-bottom: 100px;
+    padding-left: 50px;
+ }
