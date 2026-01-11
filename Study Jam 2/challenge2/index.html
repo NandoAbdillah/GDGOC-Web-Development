@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Challenge 2 — JS Animation Control</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="title">Challenge 2: Spin The Meme</h1>
+    <p class="subtitle">Goal: kontrol animasi lewat JavaScript (ubah style langsung).</p>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="stage">
+        <!-- GANTI src ke meme kamu -->
+        <img
+          id="meme"
+          class="meme"
+          src="https://i.imgur.com/6XbKQ9m.png"
+          alt="meme"
+          draggable="false"
+        />
+      </div>
+
+      <div class="readout">
+        <div class="chip">
+          Status: <span id="status">Spinning</span>
+        </div>
+        <div class="chip">
+          Arah: <span id="direction">Searah Jarum Jam</span>
+        </div>
+        <div class="chip">
+          Sudut: <span id="angle">0°</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="btn-stop" class="btn btn-ghost" type="button">Stop</button>
+        <button id="btn-reset" class="btn btn-ghost" type="button">Reset</button>
+        <button id="btn-cw" class="btn btn-primary" type="button">Searah Jarum Jam</button>
+        <button id="btn-ccw" class="btn btn-primary" type="button">Lawan Arah</button>
+      </div>
+
+      <p class="hint">
+        Hint DOM: pakai <code>style.transform</code> + <code>requestAnimationFrame</code>.
+        Stop = berhenti update sudut. Reset = sudut balik ke 0.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

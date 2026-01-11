@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>100 Click DOM Challenge</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="title">100 Click Challenge</h1>
+    <button id="btn-reset" class="btn btn-ghost" type="button">Reset</button>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <p class="desc">
+        Challenge fokus <b>DOM</b>: pakai <code>addEventListener</code> lalu
+        <b>ubah teks HTML</b> untuk nampilin progress klik.
+        Target: <b>100</b> klik. Setelah itu kamu bisa buka <b>Blind Box</b> 🎁
+      </p>
+
+      <div class="counter">
+        <div class="counter__big">
+          <span id="count">0</span><span class="muted">/100</span>
+        </div>
+        <div id="status" class="status">Klik tombol untuk mulai.</div>
+      </div>
+
+      <div class="actions">
+        <button id="btn-click" class="btn btn-primary" type="button">Klik +1</button>
+        <button id="btn-open" class="btn" type="button" disabled>Open Blind Box</button>
+      </div>
+
+      <div id="reward" class="reward" hidden>
+        <div class="reward__head">
+          <div class="reward__title">Blind Box Result</div>
+          <button id="btn-reroll" class="btn btn-ghost" type="button">Gacha lagi</button>
+        </div>
+        <div id="reward-media" class="reward__media" aria-live="polite"></div>
+        <div id="reward-text" class="reward__text"></div>
+      </div>
+
+      <ul class="notes">
+        <li>Yang kamu ubah di JS: state hitungannya + update text (#count, #status) + tampilkan reward.</li>
+        <li>Bonus ide: kasih efek kecil pas milestone (mis. 25/50/75) lewat ganti teks doang.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
