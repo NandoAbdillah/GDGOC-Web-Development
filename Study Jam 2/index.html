@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Playground — Study Jam 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">
+          <img src="https://www.gdgoc-dlsu.org/favicon.png" />
+        </div>
+        <div>
+          <div class="title">GDDGoC UNESA</div>
+          <div class="subtitle">Web Development</div>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <button id="btn-theme" class="btn btn-primary">Toggle Dark Mode</button>
+        <button id="btn-reset" class="btn btn-ghost" title="Reset demo state">
+          Reset
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <section class="notice hero">
+        
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" class="emoji" alt="Rocket" width="25" height="25" />
+
+        <div class="hero-wrap">
+          <div class="hero-kicker">
+            STUDY JAM <span class="hero-kicker-tag">#2</span>
+          </div>
+
+          <div class="hero-sub">Web Development</div>
+
+          <div class="hero-badge">Explore JavaScript dan TypeScript</div>
+        </div>
+
+      </section>
+
+      <!-- 1) DOM Selection + Text/HTML -->
+      <section class="card">
+        <h2>1) DOM Selection + Text Update</h2>
+        <p id="sel-target" class="box">
+          Hello! I am <strong>target text</strong>.
+        </p>
+
+        <div class="row">
+          <button id="btn-innerText" class="btn">
+            Use <code>innerText</code>
+          </button>
+          <button id="btn-innerHTML" class="btn">
+            Use <code>innerHTML</code>
+          </button>
+          <button id="btn-logSelection" class="btn btn-ghost">
+            Console Log Selection
+          </button>
+        </div>
+
+        <p class="muted">
+          Tips: <code>innerText</code> aman untuk text.
+          <code>innerHTML</code> bisa inject HTML (hati-hati untuk input user).
+        </p>
+      </section>
+
+      <!-- 2) Style + classList -->
+      <section class="card">
+        <h2>2) classList (add/remove/toggle) + Style</h2>
+        <div class="row">
+          <button id="btn-highlight" class="btn">Toggle Highlight</button>
+          <button id="btn-pulse" class="btn">Toggle Pulse</button>
+          <button id="btn-inlineStyle" class="btn btn-ghost">
+            Apply Inline Style
+          </button>
+        </div>
+
+        <div id="box-classdemo" class="box">
+          I change via <code>classList</code> & style.
+        </div>
+
+        <p class="muted">
+          Real project biasanya lebih clean pakai <code>classList</code> (CSS
+          handle styling), bukan inline style.
+        </p>
+      </section>
+
+      <!-- 3) NodeList forEach -->
+      <section class="card">
+        <h2>3) querySelectorAll + NodeList.forEach</h2>
+        <p class="muted">
+          Klik tombol untuk ngasih class ke banyak item sekaligus.
+        </p>
+
+        <div class="row">
+          <button id="btn-markAll" class="btn">Mark All</button>
+          <button id="btn-unmarkAll" class="btn btn-ghost">Unmark All</button>
+          <button id="btn-randomPick" class="btn">Random Pick</button>
+        </div>
+
+        <ul id="list-fruits" class="list">
+          <li class="item">🍎 Apple</li>
+          <li class="item">🍌 Banana</li>
+          <li class="item">🍇 Grape</li>
+          <li class="item">🍊 Orange</li>
+          <li class="item">🍉 Watermelon</li>
+        </ul>
+      </section>
+
+      <!-- 4) Data attributes + event delegation -->
+      <section class="card">
+        <h2>4) data-* attributes + Event Delegation</h2>
+        <p class="muted">
+          Ini pattern wajib di real project: satu event handler untuk container,
+          tapi bisa handle banyak tombol/item dinamis.
+        </p>
+
+        <div id="palette" class="palette">
+          <button class="chip" data-color="#ef4444">Red</button>
+          <button class="chip" data-color="#22c55e">Green</button>
+          <button class="chip" data-color="#3b82f6">Blue</button>
+          <button class="chip" data-color="#a855f7">Purple</button>
+          <button class="chip" data-color="#f59e0b">Amber</button>
+        </div>
+
+        <div id="color-preview" class="box">
+          Pick a color chip above → this box changes.
+        </div>
+      </section>
+
+      <!-- 5) Create / Remove elements -->
+      <section class="card">
+        <h2>5) Create / Remove Elements (Mini Todo)</h2>
+        <p class="muted">
+          Tambah item, delete item, mark done. (Menggunakan event delegation
+          juga)
+        </p>
+
+        <form id="todo-form" class="row">
+          <input
+            id="todo-input"
+            class="input"
+            placeholder="Type a task..."
+            autocomplete="off"
+          />
+          <button class="btn btn-primary" type="submit">Add</button>
+        </form>
+
+        <div class="row">
+          <button id="btn-clearDone" class="btn btn-ghost">Clear Done</button>
+          <button id="btn-clearAll" class="btn btn-ghost">Clear All</button>
+        </div>
+
+        <ul id="todo-list" class="todo"></ul>
+
+        <p class="muted">
+          Konsep yang kepake: <code>createElement</code>, <code>append</code>,
+          <code>remove</code>, <code>closest</code>, event delegation.
+        </p>
+      </section>
+
+      <!-- 6) Form validation + preventDefault -->
+      <section class="card">
+        <h2>6) Form Validation + preventDefault()</h2>
+
+        <form id="signup-form" class="stack">
+          <label class="label">
+            Email
+            <input
+              id="email"
+              class="input"
+              type="email"
+              placeholder="name@example.com"
+            />
+          </label>
+
+          <label class="label">
+            Password
+            <input
+              id="password"
+              class="input"
+              type="password"
+              placeholder="min 6 characters"
+            />
+          </label>
+
+          <label class="label">
+            Role (change event)
+            <select id="role" class="input">
+              <option value="">Choose one</option>
+              <option value="frontend">Frontend</option>
+              <option value="backend">Backend</option>
+              <option value="fullstack">Fullstack</option>
+            </select>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Create Account</button>
+          <p id="form-msg" class="msg"></p>
+        </form>
+
+        <p class="muted">
+          Kita validasi simple. Real project biasanya pakai schema validation
+          (zod/yup), tapi konsep dasarnya sama.
+        </p>
+      </section>
+
+      <!-- 7) Live search filter -->
+      <section class="card">
+        <h2>7) Live Search Filter (input event)</h2>
+        <input
+          id="search"
+          class="input"
+          placeholder="Search items... (try: api, dom, ts)"
+        />
+        <ul id="search-list" class="list">
+          <li class="search-item">DOM Manipulation</li>
+          <li class="search-item">Event Delegation</li>
+          <li class="search-item">TypeScript Basics</li>
+          <li class="search-item">JavaScript Variables</li>
+          <li class="search-item">Web APIs</li>
+          <li class="search-item">Form Validation</li>
+        </ul>
+      </section>
+
+      <!-- 8) Keyboard events + shortcuts -->
+      <section class="card">
+        <h2>8) Keyboard Events (keydown)</h2>
+        <p class="muted">
+          Contoh shortcut: <strong>Ctrl/Cmd + K</strong> untuk fokus ke input
+          search di atas. Ini pattern “pro app”.
+        </p>
+
+        <div class="box">
+          Coba tekan <kbd>Escape</kbd> untuk clear search (juga kita handle).
+        </div>
+      </section>
+
+      <!-- 9) Timer -->
+      <section class="card">
+        <h2>9) Timer + setInterval</h2>
+        <p class="muted">
+          Mini countdown. Ini juga sering dipakai (OTP timer, promo timer, dsb).
+        </p>
+
+        <div class="row">
+          <button id="btn-startTimer" class="btn btn-primary">Start 10s</button>
+          <button id="btn-stopTimer" class="btn btn-ghost">Stop</button>
+        </div>
+
+        <div id="timer" class="box timer">10</div>
+      </section>
+
+      <footer class="footer">
+        Built for Study Jam 2 — DOM Focus • Have fun experimenting ✨
+      </footer>
+    </main>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

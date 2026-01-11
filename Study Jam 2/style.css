@@ -1,0 +1,735 @@
+   :root {
+       --blue: #4285F4;
+       --red: #EA4335;
+       --yellow: #FBBC05;
+       --green: #34A853;
+
+       --ink: #1f2937;
+       /* outline / text */
+       --paper: #fffdf7;
+       /* creamy paper */
+       --paper-2: #ffffff;
+       --muted: rgba(31, 41, 55, .72);
+
+       --stroke: 3px;
+       --radius: 18px;
+       --radius-sm: 12px;
+
+       /* Sticker-like shadow (offset, not blur heavy) */
+       --shadow: 4px 4px 0 rgba(31, 41, 55, .18);
+       --shadow-strong: 5px 5px 0 rgba(31, 41, 55, .22);
+
+
+       /* === Theme tokens (LIGHT defaults) === */
+       --c-text: var(--ink);
+       --c-muted: var(--muted);
+
+       --c-bg: var(--paper);
+       --c-surface: var(--paper-2);
+
+       --c-border: rgba(31, 41, 55, .18);
+       --c-border-2: rgba(31, 41, 55, .16);
+       --c-border-3: rgba(31, 41, 55, .22);
+       --c-border-soft: rgba(31, 41, 55, .14);
+       --c-border-dash: rgba(31, 41, 55, .24);
+       --c-border-hero: rgba(31, 41, 55, .10);
+
+       --c-shadow-soft: rgba(31, 41, 55, .10);
+       --c-shadow: rgba(31, 41, 55, .14);
+       --c-shadow-strong: rgba(31, 41, 55, .18);
+       --c-shadow-xstrong: rgba(31, 41, 55, .22);
+
+       --c-topbar-bg: rgba(255, 253, 247, .86);
+
+       --c-kbd-bg: rgba(66, 133, 244, .10);
+       --c-kbd-shadow: rgba(31, 41, 55, .12);
+
+       --c-grid: rgba(31, 41, 55, .06);
+       --c-topfade: rgba(0, 0, 0, .03);
+
+       --c-splash-blue: rgba(66, 133, 244, .18);
+       --c-splash-yellow: rgba(251, 188, 5, .18);
+       --c-splash-green: rgba(52, 168, 83, .16);
+       --c-splash-red: rgba(234, 67, 53, .14);
+
+       --c-btn-bg: rgba(255, 255, 255, .96);
+       --c-btn-ghost-bg: rgba(255, 255, 255, .6);
+
+       --c-input-bg: rgba(255, 255, 255, .92);
+       --c-focus-border: rgba(66, 133, 244, .55);
+       --c-focus-ring: rgba(66, 133, 244, .14);
+
+       --c-item-bg: rgba(255, 255, 255, .9);
+
+       --c-mark-outline: rgba(66, 133, 244, .35);
+       --c-mark-bg: rgba(66, 133, 244, .08);
+
+       --c-tape-red: rgba(234, 67, 53, .22);
+       --c-tape-yellow: rgba(251, 188, 5, .22);
+
+       --c-hero-textshadow-1: rgba(255, 255, 255, .95);
+       --c-hero-textshadow-2: rgba(31, 41, 55, .18);
+
+       --c-badge-bg: rgba(52, 168, 83, .92);
+       --c-badge-border: rgba(31, 41, 55, .10);
+       --c-badge-shadow: rgba(31, 41, 55, .18);
+       --c-badge-inner: rgba(255, 255, 255, .18);
+
+       --c-done-bg: rgba(52, 168, 83, .10);
+       --c-timer-bg: rgba(251, 188, 5, .12);
+
+       --c-success: #15803d;
+       --c-danger: #b91c1c;
+
+       /* helper: box subtle gradient tint */
+       --c-box-grad: rgba(66, 133, 244, .06);
+   }
+
+
+   /* Always bind theme tokens to base variables */
+   body {
+    --c-text: var(--ink);
+    --c-muted: var(--muted);
+    --c-bg: var(--paper);
+    --c-surface: var(--paper-2);
+   }
+
+   /* === DARK MODE (variable overrides only) === */
+   body.dark {
+       --ink: rgba(255, 255, 255, .92);
+       --muted: rgba(255, 255, 255, .72);
+
+       --paper: #0b1220;
+       --paper-2: rgba(255, 255, 255, .06);
+
+
+       --c-text: var(--ink);
+       --c-muted: var(--muted);
+       --c-bg: var(--paper);
+       --c-surface: var(--paper-2);
+
+       --c-topbar-bg: rgba(11, 18, 32, .72);
+
+       --c-border: rgba(255, 255, 255, .18);
+       --c-border-2: rgba(255, 255, 255, .14);
+       --c-border-3: rgba(255, 255, 255, .22);
+       --c-border-soft: rgba(255, 255, 255, .14);
+       --c-border-dash: rgba(255, 255, 255, .18);
+       --c-border-hero: rgba(255, 255, 255, .10);
+
+       --c-shadow-soft: rgba(0, 0, 0, .35);
+       --c-shadow: rgba(0, 0, 0, .40);
+       --c-shadow-strong: rgba(0, 0, 0, .45);
+       --c-shadow-xstrong: rgba(0, 0, 0, .55);
+
+       --c-grid: rgba(255, 255, 255, .06);
+       --c-topfade: rgba(255, 255, 255, .04);
+
+       --c-splash-blue: rgba(66, 133, 244, .22);
+       --c-splash-yellow: rgba(251, 188, 5, .16);
+       --c-splash-green: rgba(52, 168, 83, .18);
+       --c-splash-red: rgba(234, 67, 53, .16);
+
+       --c-btn-bg: rgba(255, 255, 255, .10);
+       --c-btn-ghost-bg: rgba(255, 255, 255, .06);
+
+       --c-input-bg: rgba(255, 255, 255, .10);
+       --c-focus-border: rgba(96, 165, 250, .70);
+       --c-focus-ring: rgba(96, 165, 250, .18);
+
+       --c-item-bg: rgba(255, 255, 255, .08);
+
+       --c-mark-outline: rgba(96, 165, 250, .45);
+       --c-mark-bg: rgba(96, 165, 250, .12);
+
+       --c-tape-red: rgba(234, 67, 53, .28);
+       --c-tape-yellow: rgba(251, 188, 5, .22);
+
+       --c-hero-textshadow-1: rgba(11, 18, 32, .90);
+       --c-hero-textshadow-2: rgba(0, 0, 0, .55);
+
+       --c-badge-bg: rgba(52, 168, 83, .88);
+       --c-badge-border: rgba(255, 255, 255, .10);
+       --c-badge-shadow: rgba(0, 0, 0, .55);
+       --c-badge-inner: rgba(255, 255, 255, .14);
+
+       --c-done-bg: rgba(52, 168, 83, .14);
+       --c-timer-bg: rgba(251, 188, 5, .14);
+
+       --c-success: #4ade80;
+       --c-danger: #fb7185;
+   }
+
+   * {
+       box-sizing: border-box;
+   }
+
+   html,
+   body {
+       margin: 0;
+       padding: 0;
+       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+       color: var(--c-text);
+       
+   }
+
+   .font-playfair {
+       font-family: "Playfair Display", serif;
+       font-optical-sizing: auto;
+       font-style: italic;
+   }
+
+   body {
+       position: relative;
+       overflow-x: hidden;
+       background:
+           radial-gradient(900px 520px at 8% 18%, var(--c-splash-blue), transparent 60%),
+           radial-gradient(760px 520px at 92% 14%, var(--c-splash-yellow), transparent 62%),
+           radial-gradient(760px 520px at 14% 92%, var(--c-splash-green), transparent 58%),
+           radial-gradient(760px 520px at 86% 92%, var(--c-splash-red), transparent 58%),
+           linear-gradient(to bottom, var(--c-topfade), rgba(0, 0, 0, 0)),
+           repeating-linear-gradient(to right, var(--c-grid) 0px, var(--c-grid) 1px, transparent 1px, transparent 68px),
+           repeating-linear-gradient(to bottom, var(--c-grid) 0px, var(--c-grid) 1px, transparent 1px, transparent 68px),
+           var(--c-bg);
+   }
+
+
+
+
+
+   /* Topbar = “paper label” with thick outline */
+   .topbar {
+       position: sticky;
+       top: 0;
+       z-index: 10;
+       padding: 14px 18px;
+       background: var(--c-topbar-bg);
+       border-bottom: var(--stroke) solid var(--c-border-2);
+       backdrop-filter: blur(8px);
+       border-bottom: var(--stroke) solid rgba(31, 41, 55, .16);
+   }
+
+
+   .topbar {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       gap: 12px;
+   }
+
+   .brand {
+       display: flex;
+       align-items: center;
+       gap: 12px;
+   }
+
+   /* Sticker logo */
+   .logo>img {
+       width: 44px;
+       height: 44px;
+       border-radius: 14px;
+       display: grid;
+       place-items: center;
+       font-weight: 900;
+       letter-spacing: .5px;
+       padding: 5px;
+       border: var(--stroke) solid var(--c-border-3);
+       box-shadow: 4px 4px 0 var(--c-shadow-strong);
+   }
+
+   .title {
+       font-size: 16px;
+       font-weight: 900;
+       letter-spacing: .2px;
+   }
+
+   .subtitle {
+       font-size: 13px;
+       color: var(--c-muted);
+       font-weight: 600;
+   }
+
+
+
+   .topbar-actions {
+       display: flex;
+       gap: 10px;
+       flex-wrap: wrap;
+   }
+
+   /* Container */
+   .container {
+       max-width: 980px;
+       margin: 18px auto 60px;
+       padding: 0 16px;
+   }
+
+   /* Notice card = taped paper vibe */
+   .notice {
+
+       border-radius: var(--radius);
+       border: var(--stroke) solid var(--c-border);
+       background: var(--c-surface);
+       box-shadow: 4px 4px 0 var(--c-shadow-strong);
+       padding: 14px 16px;
+       position: relative;
+   }
+
+   /* small “tape” accents */
+   .notice::before,
+   .notice::after {
+       content: "";
+       position: absolute;
+       width: 64px;
+       height: 18px;
+       background: var(--c-tape-red);
+       border: 2px solid var(--c-border);
+       transform: rotate(-10deg);
+       top: -10px;
+   }
+
+   .notice::before {
+       left: 22px;
+   }
+
+   .notice::after {
+       right: 22px;
+       transform: rotate(8deg);
+       background: var(--c-tape-yellow);
+   }
+
+   /* ===== Hero style like GDGoC poster ===== */
+   .notice.hero {
+       /* keep your taped paper style */
+       padding: 18px 18px 20px;
+   }
+
+   .hero-wrap {
+       display: grid;
+       gap: 10px;
+       justify-items: center;
+       text-align: center;
+   }
+
+   /* Big title: STUDY JAM (italic + outlined/shadow) */
+   .hero-kicker {
+       position: relative;
+       font-weight: 950;
+       letter-spacing: 1px;
+       font-size: clamp(34px, 5vw, 54px);
+       font-style: italic;
+       text-transform: uppercase;
+       /* GDGoC-like “outlined highlight” feel */
+       color: var(--blue);
+       text-shadow:
+           2px 2px 0 var(--c-hero-textshadow-1),
+           4px 4px 0 var(--c-hero-textshadow-2);
+       transform: skewX(-10deg);
+       line-height: 1;
+   }
+
+   /* subtle “paper highlight” behind STUDY JAM */
+   /* .hero-kicker::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: -16px;
+        right: -16px;
+        top: 50%;
+        height: 62%;
+        transform: translateY(-50%) skewX(12deg);
+        border-radius: 14px;
+        background: rgba(66, 133, 244, .12);
+        border: 2px solid rgba(31, 41, 55, .10);
+    } */
+
+   /* #2 tag (yellow sticker) */
+   .hero-kicker-tag {
+       display: inline-block;
+       margin-left: -50px;
+       margin-top: 20px;
+       padding: 6px 10px;
+       font-style: normal;
+       /* transform: skewX(-10deg); */
+       transform: rotate(-10deg);
+       color: var(--yellow);
+       /* background: rgba(251, 188, 5, .95); */
+       /* border: 2px solid rgba(31, 41, 55, .16); */
+       font-size: 1em;
+       vertical-align: middle;
+   }
+
+   /* small emoji alignment (optional) */
+   .hero-emoji {
+       margin-left: 8px;
+       transform: skewX(10deg);
+       vertical-align: middle;
+   }
+
+   .hero-sub {
+       font-weight: 900;
+       font-size: 22px;
+       position: absolute;
+       bottom: calc(50% - 18px);
+       letter-spacing: .4px;
+       color: var(--blue);
+       transform: translateY(-2px);
+   }
+
+   .hero .emoji {
+       position: absolute;
+       top: 20%;
+       left: 15%;
+       height: 6.5em;
+       width: 6.5em;
+   }
+
+   /* Green highlight badge like “AGENDA OVERVIEW” */
+   .hero-badge {
+       display: inline-block;
+       padding: 10px 18px;
+       border-radius: 14px;
+       color: #fff;
+       font-weight: 950;
+       letter-spacing: .6px;
+       text-transform: uppercase;
+       font-size: 14px;
+       /* slight tilt + sticker shadow */
+       transform: skewX(-10deg);
+       background: var(--c-badge-bg);
+       border: 2px solid var(--c-badge-border);
+       box-shadow: 6px 6px 0 var(--c-badge-shadow);
+   }
+
+   /* make text inside badge look straight even when container skewed */
+   .hero-badge {
+       position: relative;
+   }
+
+   .hero-badge::after {
+       content: "";
+       position: absolute;
+       inset: 0;
+       border-radius: 14px;
+       pointer-events: none;
+       /* subtle inner highlight */
+       box-shadow: inset 0 2px 0 var(--c-badge-inner);
+   }
+
+   .hint {
+       margin-top: 10px;
+       color: var(--c-muted);
+       ;
+       font-weight: 600;
+   }
+
+   kbd {
+       display: inline-block;
+       padding: 2px 8px;
+       border-radius: 10px;
+       border: 2px solid var(--c-border);
+       background: var(--c-kbd-bg);
+       box-shadow: 2px 2px 0 var(--c-kbd-shadow);
+       font-weight: 800;
+   }
+
+   /* Cards = sticker panels */
+   .card {
+       border: var(--stroke) solid var(--c-border);
+       background: var(--c-surface);
+       box-shadow: 5px 5px 0 var(--c-shadow-xstrong);
+       border-radius: var(--radius);
+       padding: 16px;
+       margin: 14px 0;
+       position: relative;
+   }
+
+   /* Cute corner sparkle/star */
+   .card::after {
+       content: "";
+       position: absolute;
+       right: 14px;
+       top: 14px;
+       width: 14px;
+       height: 14px;
+       background: var(--c-mark-outline);
+       border: 2px solid var(--c-border-soft);
+       transform: rotate(45deg);
+       border-radius: 4px;
+   }
+
+   .card h2 {
+       margin: 0 0 10px;
+       font-size: 18px;
+       font-weight: 950;
+       letter-spacing: .2px;
+   }
+
+   /* Rows / stacks */
+   .row {
+       display: flex;
+       gap: 10px;
+       flex-wrap: wrap;
+       align-items: center;
+   }
+
+   .stack {
+       display: grid;
+       gap: 10px;
+   }
+
+   /* Box = doodle dashed paper */
+   .box {
+       margin-top: 12px;
+       border-radius: 14px;
+       padding: 12px;
+       min-height: 48px;
+       border: 2px dashed var(--c-border-dash);
+       background: linear-gradient(to bottom, var(--c-box-grad), transparent 55%), rgba(0, 0, 0, 0);
+   }
+
+   /* Muted text */
+   .muted {
+       color: var(--c-muted);
+       ;
+       margin-top: 10px;
+       font-weight: 600;
+   }
+
+   /* Buttons = chunky sticker buttons */
+   .btn {
+
+       border-radius: 999px;
+       padding: 10px 14px;
+       cursor: pointer;
+       font-weight: 900;
+       letter-spacing: .2px;
+       transition: transform .08s ease, box-shadow .08s ease;
+       border: var(--stroke) solid var(--c-border);
+       background: var(--c-btn-bg);
+       color: var(--c-text);
+       box-shadow: 4px 4px 0 var(--c-shadow);
+   }
+
+   .btn:hover {
+       transform: translateY(-1px);
+       box-shadow: 5px 5px 0 rgba(31, 41, 55, .16);
+   }
+
+   .btn:active {
+       transform: translateY(1px);
+       box-shadow: 3px 3px 0 rgba(31, 41, 55, .14);
+   }
+
+   .btn-primary {
+       background: linear-gradient(135deg, rgba(66, 133, 244, .95), rgba(66, 133, 244, .78));
+       color: white;
+       border-color: rgba(31, 41, 55, .16);
+   }
+
+   .btn-ghost {
+       background: var(--c-btn-ghost-bg);
+   }
+
+   /* Inputs = rounded sticker fields */
+   .input {
+       width: min(520px, 100%);
+       border-radius: 999px;
+       padding: 10px 14px;
+       outline: none;
+       font-weight: 700;
+       border: var(--stroke) solid var(--c-border-soft);
+       background: var(--c-input-bg);
+       color: var(--c-text);
+       box-shadow: 4px 4px 0 var(--c-shadow-soft);
+   }
+
+   .input:focus {
+       border-color: var(--c-focus-border);
+       box-shadow: 4px 4px 0 var(--c-shadow-soft), 0 0 0 6px var(--c-focus-ring);
+   }
+
+   .label {
+       display: grid;
+       gap: 6px;
+       font-size: 14px;
+       color: var(--muted);
+       font-weight: 800;
+   }
+
+   /* Lists */
+   .list {
+       margin: 12px 0 0;
+       padding: 0;
+       list-style: none;
+       display: grid;
+       gap: 8px;
+   }
+
+   .item,
+   .search-item {
+       border: 2px solid var(--c-border-soft);
+       background: var(--c-item-bg);
+       box-shadow: 3px 3px 0 var(--c-shadow-soft);
+       color: var(--c-text);
+       border-radius: 14px;
+       padding: 10px 12px;
+       font-weight: 800;
+   }
+
+   .item.marked {
+       outline: 4px solid var(--c-mark-outline);
+       background: var(--c-mark-bg);
+   }
+
+   /* Palette chips */
+   .palette {
+       display: flex;
+       gap: 10px;
+       flex-wrap: wrap;
+       margin-top: 8px;
+   }
+
+   .chip {
+       border: var(--stroke) solid rgba(31, 41, 55, .16);
+       border-radius: 999px;
+       padding: 9px 14px;
+       background: rgba(255, 255, 255, .92);
+       font-weight: 900;
+       box-shadow: 4px 4px 0 rgba(31, 41, 55, .12);
+       cursor: pointer;
+       transition: transform .08s ease;
+   }
+
+   .chip:hover {
+       transform: translateY(-1px);
+   }
+
+   /* Todo */
+   .todo {
+       margin: 12px 0 0;
+       padding: 0;
+       list-style: none;
+       display: grid;
+       gap: 8px;
+   }
+
+   .todo-item {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 10px;
+       border: 2px solid var(--c-border-soft);
+       background: var(--c-item-bg);
+       box-shadow: 3px 3px 0 var(--c-shadow-soft);
+       border-radius: 14px;
+       padding: 10px 12px;
+   }
+
+   .todo-item.done {
+       background: var(--c-done-bg);
+   }
+
+   .todo-item.done .todo-text {
+       text-decoration: line-through;
+       opacity: .7;
+   }
+
+   .todo-actions {
+       display: flex;
+       gap: 8px;
+   }
+
+   .todo-btn {
+       border: 2px solid rgba(31, 41, 55, .16);
+       background: rgba(255, 255, 255, .9);
+       color: var(--ink);
+       border-radius: 999px;
+       padding: 6px 10px;
+       cursor: pointer;
+       font-weight: 900;
+       box-shadow: 2px 2px 0 rgba(31, 41, 55, .10);
+   }
+
+   .todo-btn:hover {
+       transform: translateY(-1px);
+   }
+
+   /* Messages */
+   .msg {
+       min-height: 22px;
+       margin: 0;
+       font-weight: 900;
+   }
+
+   .msg.ok {
+       color: var(--c-success);
+   }
+
+   .msg.err {
+       color: var(--c-success);
+   }
+
+   /* Highlight / pulse like sticker emphasis */
+   .highlight {
+       outline: 4px solid rgba(52, 168, 83, .35);
+       background: rgba(52, 168, 83, .10);
+   }
+
+   .pulse {
+       animation: pop 0.9s ease-in-out infinite alternate;
+   }
+
+   @keyframes pop {
+       from {
+           transform: translateY(0) scale(1);
+       }
+
+       to {
+           transform: translateY(-2px) scale(1.02);
+       }
+   }
+
+   /* Timer */
+   .timer {
+       font-size: 28px;
+       font-weight: 950;
+       text-align: center;
+       background: rgba(251, 188, 5, .12);
+   }
+
+   /* Footer */
+   .footer {
+       margin-top: 18px;
+       color: var(--c-muted);
+       text-align: center;
+       font-size: 13px;
+       font-weight: 800;
+   }
+
+   /* Small screens */
+   @media (max-width: 520px) {
+       .topbar {
+           padding: 12px 12px;
+       }
+
+       .logo {
+           width: 40px;
+           height: 40px;
+       }
+
+       .card {
+           padding: 14px;
+       }
+
+       .btn {
+           padding: 9px 12px;
+       }
+
+       .hero .emoji {
+           /* display: none; */
+           left: 5%;
+           width: 2.5em;
+           height: 2.5em;
+       }
+   }
